@@ -73,7 +73,7 @@
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>17.0</version>
+      <version>30.0-jre</version>
     </dependency>
   </dependencies>
 
@@ -96,9 +96,9 @@
             <phase>process-sources</phase>
             <configuration>
               <tasks>
-                <move file="src/main/java/com/android/tools/perflib/heap/HprofParser.java" tofile="src/main/java/com/android/tools/perflib/heap/HprofParser.java.override" />
-                <copy file="src/patch/java/com/android/tools/perflib/heap/HprofParser.java" todir="src/main/java/com/android/tools/perflib/heap/" />
-                <move file="./src/main/java/com/android/tools/perflib/heap/memoryanalyzer" tofile="./removed" />
+                <move file="src/main/java/com/android/tools/perflib/heap/HprofParser.java" tofile="src/main/java/com/android/tools/perflib/heap/HprofParser.java.override"/>
+                <copy file="src/patch/java/com/android/tools/perflib/heap/HprofParser.java" todir="src/main/java/com/android/tools/perflib/heap/"/>
+                <move file="./src/main/java/com/android/tools/perflib/heap/memoryanalyzer" tofile="./removed"/>
               </tasks>
             </configuration>
             <goals>
@@ -110,8 +110,8 @@
             <phase>compile</phase>
             <configuration>
               <tasks>
-                <move file="src/main/java/com/android/tools/perflib/heap/HprofParser.java.override" tofile="src/main/java/com/android/tools/perflib/heap/HprofParser.java" />
-                <move file="./removed" tofile="./src/main/java/com/android/tools/perflib/heap/memoryanalyzer" />
+                <move file="src/main/java/com/android/tools/perflib/heap/HprofParser.java.override" tofile="src/main/java/com/android/tools/perflib/heap/HprofParser.java"/>
+                <move file="./removed" tofile="./src/main/java/com/android/tools/perflib/heap/memoryanalyzer"/>
               </tasks>
             </configuration>
             <goals>
